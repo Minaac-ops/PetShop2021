@@ -5,4 +5,8 @@
         <RootNamespace>Mac.PetShop2021comp.Domain</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Mac.PetShop2021comp1.Core\Mac.PetShop2021comp1.Core.csproj" />
+    </ItemGroup>
+
 </Project>

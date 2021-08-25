@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Mac.PetShop2021comp1.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Mac.PetShop2021comp1.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mac.PetShop2021comp1.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Mac.PetShop2021comp1.Core/1.0.0": {
+      "type": "project",
+      "path": "../Mac.PetShop2021comp1.Core/Mac.PetShop2021comp1.Core.csproj",
+      "msbuildProject": "../Mac.PetShop2021comp1.Core/Mac.PetShop2021comp1.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Mac.PetShop2021comp1.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Bruger\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
+              "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

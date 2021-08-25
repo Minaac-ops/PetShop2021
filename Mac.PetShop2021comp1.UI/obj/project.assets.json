@@ -1,11 +1,69 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Mac.PetShop2021comp1.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Mac.PetShop2021comp1.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mac.PetShop2021comp1.Core.dll": {}
+        }
+      },
+      "Mac.PetShop2021comp1.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Mac.PetShop2021comp1.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mac.PetShop2021comp1.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mac.PetShop2021comp1.Domain.dll": {}
+        }
+      },
+      "Mac.PetShop2021comp1.Infrastructure.DataAcces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Mac.PetShop2021comp1.Core": "1.0.0",
+          "Mac.PetShop2021comp1.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mac.PetShop2021comp1.Infrastructure.DataAcces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mac.PetShop2021comp1.Infrastructure.DataAcces.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Mac.PetShop2021comp1.Core/1.0.0": {
+      "type": "project",
+      "path": "../Mac.PetShop2021comp1.Core/Mac.PetShop2021comp1.Core.csproj",
+      "msbuildProject": "../Mac.PetShop2021comp1.Core/Mac.PetShop2021comp1.Core.csproj"
+    },
+    "Mac.PetShop2021comp1.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Mac.PetShop2021comp1.Domain/Mac.PetShop2021comp1.Domain.csproj",
+      "msbuildProject": "../Mac.PetShop2021comp1.Domain/Mac.PetShop2021comp1.Domain.csproj"
+    },
+    "Mac.PetShop2021comp1.Infrastructure.DataAcces/1.0.0": {
+      "type": "project",
+      "path": "../Mac.PetShop2021comp1.Infrastructure.DataAcces/Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj",
+      "msbuildProject": "../Mac.PetShop2021comp1.Infrastructure.DataAcces/Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Mac.PetShop2021comp1.Core >= 1.0.0",
+      "Mac.PetShop2021comp1.Domain >= 1.0.0",
+      "Mac.PetShop2021comp1.Infrastructure.DataAcces >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Bruger\\.nuget\\packages\\": {},
@@ -38,7 +96,17 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
+              "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
+            },
+            "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
+              "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj"
+            },
+            "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj": {
+              "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
