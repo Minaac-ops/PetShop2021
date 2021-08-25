@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Mac.PetShop2021comp1.Core.IServices;
+using Mac.PetShop2021comp1.Core.Models;
 
 namespace Mac.PetShop2021comp1.UI
 {
@@ -12,6 +14,7 @@ namespace Mac.PetShop2021comp1.UI
         public Menu(IPetService service)
         {
             _service = service;
+            InitData();
         }
 
         public void Start()
@@ -68,12 +71,48 @@ namespace Mac.PetShop2021comp1.UI
 
         private void ReadAllPets()
         {
-            throw new NotImplementedException();
+            foreach (var pet in _service.GetPets())
+            {
+                Print($"Pet type: {pet.Type}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
+            }
         }
 
         private void CreatePet()
         {
-            throw new NotImplementedException();
+            Print(StringConstants.CreatePetGreeting);
+            
+            //Pet Type
+            Print(StringConstants.PetTypeName);
+            var petType = Console.ReadLine();
+
+            //Actual pet
+            Print(StringConstants.PetNameText);
+            var petName = Console.ReadLine();
+            
+            Print(StringConstants.PetBirtdayText);
+            DateTime petBirthday = DateTime.Parse(Console.ReadLine());
+            
+            Print(StringConstants.PetSoldTimeText);
+            DateTime petSoldTime = DateTime.Parse(Console.ReadLine());
+            
+            Print(StringConstants.PetColorText);
+            var petColor = Console.ReadLine();
+            
+            Print(StringConstants.PetPriceText);
+            double petPrice = Double.Parse(Console.ReadLine());
+
+            var pet = new Pet()
+            {
+                Birthday = petBirthday,
+                Color = petColor,
+                Name = petName,
+                Type = petType,
+                SoldTime = petSoldTime,
+                Price = petPrice
+            };
+            pet = _service.Add(pet);
+            Print($"Pet created.\nId: {pet.Id}, pet type: {pet.Type}," +
+                  $" name: {pet.Name}, color: {pet.Color}, birthday: {pet.Birthday} sold time: {pet.SoldTime}, price: {pet.Price}/n");
         }
 
         private int GetMainMenuSelection()
@@ -90,9 +129,7 @@ namespace Mac.PetShop2021comp1.UI
 
         private void ShowMainMenu()
         {
-            Print("\n");
             Print(StringConstants.SelectOptions);
-            Print("\n");
             string[] menuItems =
             {
                 StringConstants.MenuTextCreateNewPet,
@@ -111,6 +148,42 @@ namespace Mac.PetShop2021comp1.UI
         private void Print(string value)
         {
             Console.WriteLine(value);
+        }
+        
+        void InitData()
+        {
+            var pet1 = new Pet()
+            {
+                Name = "Lassie",
+                Type = "Dog",
+                Birthday = new DateTime(2021, 5, 8),
+                SoldTime = new DateTime(2021, 5, 9),
+                Color = "Brown",
+                Price = 5000
+            };
+            _service.Add(pet1);
+            
+            var pet2 = new Pet()
+            {
+                Name = "Trine",
+                Type = "Cat",
+                Birthday = new DateTime(2021, 5, 8),
+                SoldTime = new DateTime(2021, 5, 9),
+                Color = "Black",
+                Price = 5000
+            };
+            _service.Add(pet2);
+            
+            var pet3 = new Pet()
+            {
+                Name = "Mathias",
+                Type = "Fox",
+                Birthday = new DateTime(2021, 5, 8),
+                SoldTime = new DateTime(2021, 5, 9),
+                Color = "Red",
+                Price = 5000
+            };
+            _service.Add(pet3);
         }
     }
 }
