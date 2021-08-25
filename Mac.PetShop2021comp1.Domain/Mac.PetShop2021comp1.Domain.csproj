@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>Mac.PetShop2021comp.Domain</RootNamespace>
+    </PropertyGroup>
+
+</Project>
