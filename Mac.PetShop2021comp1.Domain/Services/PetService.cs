@@ -16,15 +16,20 @@ namespace Mac.PetShop2021comp.Domain.Services
 
         public Pet Add(Pet pet)
         {
-            return _repo.Add(pet);
+            return _repo.Create(pet);
         }
 
         public List<Pet> GetPets()
         {
-            var list = _repo.FindAll();
+            var list = _repo.ReadPets();
             var orderedEnumerable = list.OrderBy(pet => pet.Price);
 
             return orderedEnumerable.ToList();
+        }
+
+        public void RemovePet(int id)
+        {
+            _repo.Delete(id);
         }
     }
 }

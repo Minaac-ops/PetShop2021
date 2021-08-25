@@ -45,7 +45,7 @@ namespace Mac.PetShop2021comp1.UI
                         UpdatePet();
                         break;
                     case 4:
-                        DepetePet();
+                        RemovePet();
                         break;
                     case 5:
                         SearchByType();
@@ -59,9 +59,15 @@ namespace Mac.PetShop2021comp1.UI
             throw new NotImplementedException();
         }
 
-        private void DepetePet()
+        private void RemovePet()
         {
-            throw new NotImplementedException();
+            Print(StringConstants.TypeIdDeleteMessage);
+            var idDelete = int.Parse(Console.ReadLine());
+            if (idDelete != null)
+            {
+                _service.RemovePet(idDelete);
+                Print($"Pet with id {idDelete} was successfully removed from list of pets.");
+            }
         }
 
         private void UpdatePet()

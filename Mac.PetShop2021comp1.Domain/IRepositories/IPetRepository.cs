@@ -5,13 +5,13 @@ namespace Mac.PetShop2021comp.Domain.IRepositories
 {
     public interface IPetRepository
     {
-        Pet Add(Pet pet);
+        Pet Create(Pet pet);
 
-        IEnumerable<Pet> FindAll();
+        IEnumerable<Pet> ReadPets();
 
         Pet Update(Pet petUpdate);
 
-        void Remove(int petIdRemove);
+        void Delete(int petIdRemove);
 
     }
 }

@@ -7,7 +7,8 @@ namespace Mac.PetShop2021comp1.Core.IServices
     {
         Pet Add(Pet pet);
 
-
         List<Pet> GetPets();
+
+        void RemovePet(int id);
     }
 }

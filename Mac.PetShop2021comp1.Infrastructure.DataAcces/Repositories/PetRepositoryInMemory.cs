@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Mac.PetShop2021comp.Domain.IRepositories;
 using Mac.PetShop2021comp1.Core.Models;
 
@@ -8,14 +9,14 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.Repositories
     {
         private static List<Pet> _petTable = new List<Pet>();
         private static int _id = 1;
-        public Pet Add(Pet pet)
+        public Pet Create(Pet pet)
         {
             pet.Id = _id++;
             _petTable.Add(pet);
             return pet;
         }
 
-        public IEnumerable<Pet> FindAll()
+        public IEnumerable<Pet> ReadPets()
         {
             return _petTable;
         }
@@ -25,9 +26,25 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.Repositories
             throw new System.NotImplementedException();
         }
 
-        public void Remove(int petIdRemove)
+        public void Delete(int petIdRemove)
         {
-            throw new System.NotImplementedException();
+            var petFound = ReadById(petIdRemove);
+            if (petFound != null)
+            {
+                _petTable.Remove(petFound);
+            }
+        }
+
+        private Pet ReadById(int id)
+        {
+            foreach (var pet in _petTable)
+            {
+                if (pet.Id == id)
+                {
+                    return pet;
+                }
+            }
+            return null;
         }
     }
 }
