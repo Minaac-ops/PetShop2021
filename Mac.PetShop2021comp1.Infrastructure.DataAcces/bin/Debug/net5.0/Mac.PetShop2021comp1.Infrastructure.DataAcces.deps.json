@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Mac.PetShop2021comp1.Infrastructure.DataAcces/1.0.0": {
+        "dependencies": {
+          "Mac.PetShop2021comp1.Core": "1.0.0",
+          "Mac.PetShop2021comp1.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Mac.PetShop2021comp1.Infrastructure.DataAcces.dll": {}
+        }
+      },
+      "Mac.PetShop2021comp1.Core/1.0.0": {
+        "runtime": {
+          "Mac.PetShop2021comp1.Core.dll": {}
+        }
+      },
+      "Mac.PetShop2021comp1.Domain/1.0.0": {
+        "dependencies": {
+          "Mac.PetShop2021comp1.Core": "1.0.0"
+        },
+        "runtime": {
+          "Mac.PetShop2021comp1.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mac.PetShop2021comp1.Infrastructure.DataAcces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mac.PetShop2021comp1.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mac.PetShop2021comp1.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Mac.PetShop2021comp1.Domain/1.0.0": {
+        "dependencies": {
+          "Mac.PetShop2021comp1.Core": "1.0.0"
+        },
+        "runtime": {
+          "Mac.PetShop2021comp1.Domain.dll": {}
+        }
+      },
+      "Mac.PetShop2021comp1.Core/1.0.0": {
+        "runtime": {
+          "Mac.PetShop2021comp1.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mac.PetShop2021comp1.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mac.PetShop2021comp1.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\bin\Debug\net5.0\Mac.PetShop2021comp1.Domain.deps.json
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\bin\Debug\net5.0\Mac.PetShop2021comp1.Domain.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\bin\Debug\net5.0\ref\Mac.PetShop2021comp1.Domain.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\bin\Debug\net5.0\Mac.PetShop2021comp1.Domain.pdb
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\bin\Debug\net5.0\Mac.PetShop2021comp1.Core.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\bin\Debug\net5.0\Mac.PetShop2021comp1.Core.pdb
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\Mac.PetShop2021comp1.Domain.csproj.AssemblyReference.cache
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\Mac.PetShop2021comp1.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\Mac.PetShop2021comp1.Domain.AssemblyInfoInputs.cache
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\Mac.PetShop2021comp1.Domain.AssemblyInfo.cs
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\Mac.PetShop2021comp1.Domain.csproj.CoreCompileInputs.cache
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\Mac.PetShop2021comp1.Domain.csproj.CopyComplete
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\Mac.PetShop2021comp1.Domain.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\ref\Mac.PetShop2021comp1.Domain.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Domain\obj\Debug\net5.0\Mac.PetShop2021comp1.Domain.pdb

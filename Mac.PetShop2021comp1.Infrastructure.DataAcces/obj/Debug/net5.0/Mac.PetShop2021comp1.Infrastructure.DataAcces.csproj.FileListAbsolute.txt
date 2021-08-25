@@ -1,0 +1,17 @@
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\bin\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.deps.json
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\bin\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\bin\Debug\net5.0\ref\Mac.PetShop2021comp1.Infrastructure.DataAcces.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\bin\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.pdb
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\bin\Debug\net5.0\Mac.PetShop2021comp1.Core.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\bin\Debug\net5.0\Mac.PetShop2021comp1.Domain.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\bin\Debug\net5.0\Mac.PetShop2021comp1.Core.pdb
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\bin\Debug\net5.0\Mac.PetShop2021comp1.Domain.pdb
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj.AssemblyReference.cache
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.AssemblyInfoInputs.cache
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.AssemblyInfo.cs
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj.CoreCompileInputs.cache
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj.CopyComplete
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\ref\Mac.PetShop2021comp1.Infrastructure.DataAcces.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Infrastructure.DataAcces\obj\Debug\net5.0\Mac.PetShop2021comp1.Infrastructure.DataAcces.pdb
