@@ -14,7 +14,6 @@ namespace Mac.PetShop2021comp1.UI
         public Menu(IPetService service)
         {
             _service = service;
-            InitData();
         }
 
         public void Start()
@@ -195,7 +194,7 @@ namespace Mac.PetShop2021comp1.UI
             Console.WriteLine(value);
         }
         
-        void InitData()
+        public void InitData()
         {
             var pet1 = new Pet()
             {

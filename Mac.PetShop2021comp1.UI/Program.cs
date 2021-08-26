@@ -24,6 +24,7 @@ namespace Mac.PetShop2021comp1.UI
             //IPetService service = new PetService(repo);
 
             var menu = new Menu(petService);
+            menu.InitData();
             menu.Start();
         }
     }
