@@ -13,5 +13,7 @@ namespace Mac.PetShop2021comp.Domain.IRepositories
 
         void Delete(int petIdRemove);
 
+        public Pet ReadById(int id);
+
     }
 }

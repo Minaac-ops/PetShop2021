@@ -31,5 +31,15 @@ namespace Mac.PetShop2021comp.Domain.Services
         {
             _repo.Delete(id);
         }
+
+        public Pet UpdatePet(Pet petUpdate)
+        {
+            return _repo.Update(petUpdate);
+        }
+
+        public Pet SearchById(int id)
+        {
+            return _repo.ReadById(id);
+        }
     }
 }

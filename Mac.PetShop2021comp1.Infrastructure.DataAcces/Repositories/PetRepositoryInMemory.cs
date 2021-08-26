@@ -23,7 +23,14 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.Repositories
 
         public Pet Update(Pet petUpdate)
         {
-            throw new System.NotImplementedException();
+            var pet = ReadById(petUpdate.Id);
+            if (pet != null)
+            {
+                pet.Name = petUpdate.Name;
+                pet.Price = petUpdate.Price;
+                return pet;
+            }
+            return null;
         }
 
         public void Delete(int petIdRemove)
@@ -35,7 +42,7 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.Repositories
             }
         }
 
-        private Pet ReadById(int id)
+        public Pet ReadById(int id)
         {
             foreach (var pet in _petTable)
             {

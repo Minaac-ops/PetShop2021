@@ -61,7 +61,7 @@ namespace Mac.PetShop2021comp1.UI
 
         private void RemovePet()
         {
-            Print(StringConstants.TypeIdDeleteMessage);
+            Print(StringConstants.TypeIdOfPetMessage);
             var idDelete = int.Parse(Console.ReadLine());
             if (idDelete != null)
             {
@@ -72,7 +72,27 @@ namespace Mac.PetShop2021comp1.UI
 
         private void UpdatePet()
         {
-            throw new NotImplementedException();
+            Print(StringConstants.TypeIdOfPetMessage);
+            int idUpdate = int.Parse(Console.ReadLine());
+            var petUpdate = _service.SearchById(idUpdate);
+            
+            Print(StringConstants.NewNameMessage);
+            var newName = Console.ReadLine();
+            
+            Print(StringConstants.NewPriceMessage);
+            double newPrice = double.Parse(Console.ReadLine());
+
+            _service.UpdatePet(new Pet()
+            {
+                Id = petUpdate.Id,
+                Name = newName,
+                Price = newPrice,
+                Birthday = petUpdate.Birthday,
+                Color = petUpdate.Color,
+                SoldTime = petUpdate.SoldTime,
+                Type = petUpdate.Type
+            });
+            Print($"Pet with if {petUpdate.Name} was succesfully updated. New name: {petUpdate.Name}, new Price = {petUpdate.Price}.");
         }
 
         private void ReadAllPets()

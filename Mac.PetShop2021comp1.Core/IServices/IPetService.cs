@@ -10,5 +10,9 @@ namespace Mac.PetShop2021comp1.Core.IServices
         List<Pet> GetPets();
 
         void RemovePet(int id);
+
+        Pet UpdatePet(Pet pet);
+
+        public Pet SearchById(int id);
     }
 }

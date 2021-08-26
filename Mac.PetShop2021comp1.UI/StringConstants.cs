@@ -18,8 +18,12 @@
         public static readonly string PetSoldTimeText = "Type the day the pet was sold";
         public static readonly string PetColorText = "Type in the color of the pet";
         public static readonly string PetPriceText = "Type in the price of the pet";
+        
+        public static readonly string TypeIdOfPetMessage =
+            "Type in the id of the pet";
 
-        public static readonly string TypeIdDeleteMessage =
-            "Type in the id of the pet you want to remove from list of pets";
+        //Update pet strings
+        public static readonly string NewNameMessage = "Type the new name of the pet";
+        public static readonly string NewPriceMessage = "Type the new price of the pet";
     }
 }
