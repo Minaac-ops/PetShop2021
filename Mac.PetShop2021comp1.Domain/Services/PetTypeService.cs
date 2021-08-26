@@ -8,25 +8,26 @@ namespace Mac.PetShop2021comp.Domain.Services
 {
     public class PetTypeService : IPetTypeService
     {
-        private IPetTypeRepository _TypeRepo;
+        private IPetTypeRepository _typeRepo;
+        
         public PetTypeService(IPetTypeRepository typeRepo)
         {
-            _TypeRepo = typeRepo;
+            _typeRepo = typeRepo;
+        }
+        
+        public PetType CreatePetType(PetType petType)
+        {
+            return _typeRepo.CreateType(petType);
         }
         
         public List<PetType> GetPetTypes()
         {
-            return _TypeRepo.readPetTypes().ToList();
+            return _typeRepo.ReadPetTypes().ToList();
         }
-
-        public PetType CreatePetType(PetType petType)
-        {
-            return _TypeRepo.CreateType(petType);
-        }
-
+        
         public PetType GetById(int id)
         {
-            return _TypeRepo.GetById(id);
+            return _typeRepo.ReadById(id);
         }
     }
 }

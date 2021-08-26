@@ -5,10 +5,10 @@ namespace Mac.PetShop2021comp.Domain.IRepositories
 {
     public interface IPetTypeRepository
     {
-        IEnumerable<PetType> readPetTypes();
-
         PetType CreateType(PetType petType);
-
-        PetType GetById(int id);
+        
+        IEnumerable<PetType> ReadPetTypes();
+        
+        PetType ReadById(int id);
     }
 }

@@ -8,15 +8,15 @@ namespace Mac.PetShop2021comp1.Core.IServices
         Pet Add(Pet pet);
 
         List<Pet> GetPets();
-
-        void RemovePet(int id);
-
+        
+        public List<Pet> Get5Cheapest();
+        
         Pet UpdatePet(Pet pet);
 
+        void RemovePet(int id);
+        
         Pet SearchById(int id);
 
         List<Pet> SearchByType(string type);
-
-        public List<Pet> Get5Cheapest();
     }
 }

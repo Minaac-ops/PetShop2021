@@ -5,9 +5,9 @@ namespace Mac.PetShop2021comp1.Core.IServices
 {
     public interface IPetTypeService
     {
-        List<PetType> GetPetTypes();
-
         PetType CreatePetType(PetType petType);
+        
+        List<PetType> GetPetTypes();
 
         PetType GetById(int id);
     }

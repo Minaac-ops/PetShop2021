@@ -9,6 +9,7 @@ namespace Mac.PetShop2021comp.Domain.Services
     public class PetService : IPetService
     {
         private IPetRepository _repo;
+        
         public PetService(IPetRepository repo)
         {
             _repo = repo;
@@ -26,17 +27,7 @@ namespace Mac.PetShop2021comp.Domain.Services
 
             return orderedEnumerable.ToList();
         }
-
-        public void RemovePet(int id)
-        {
-            _repo.Delete(id);
-        }
-
-        public Pet UpdatePet(Pet petUpdate)
-        {
-            return _repo.Update(petUpdate);
-        }
-
+        
         public Pet SearchById(int id)
         {
             return _repo.ReadById(id);
@@ -54,6 +45,16 @@ namespace Mac.PetShop2021comp.Domain.Services
         {
             var enumerable = GetPets().Take(5);
             return enumerable.ToList();
+        }
+        
+        public Pet UpdatePet(Pet petUpdate)
+        {
+            return _repo.Update(petUpdate);
+        }
+
+        public void RemovePet(int id)
+        {
+            _repo.Delete(id);
         }
     }
 }

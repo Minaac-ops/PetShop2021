@@ -16,7 +16,7 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.Repositories
             return petType;
         }
 
-        public PetType GetById(int id)
+        public PetType ReadById(int id)
         {
             foreach (var petType in _typeTable)
             {
@@ -28,7 +28,7 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.Repositories
             return null;
         }
 
-        public IEnumerable<PetType> readPetTypes()
+        public IEnumerable<PetType> ReadPetTypes()
         {
             return _typeTable;
         }

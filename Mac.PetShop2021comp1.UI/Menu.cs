@@ -30,7 +30,7 @@ namespace Mac.PetShop2021comp1.UI
         {
             Print(StringConstants.WelcomeGreeting);
         }
-        
+
         private void StartLoop()
         {
             int choice;
@@ -59,79 +59,38 @@ namespace Mac.PetShop2021comp1.UI
                 }
             }
         }
-
-        private void Get5Cheapest()
+        
+        private int GetMainMenuSelection()
         {
-            Print(StringConstants.CheapestPetsMessage);
-            foreach (var pet in _service.Get5Cheapest())
+            ShowMainMenu();
+            var selectionString = Console.ReadLine();
+            int selection;
+            if (int.TryParse(selectionString, out selection))
             {
-                Print($"price: {pet.Price}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, sold: {pet.SoldTime}, id: {pet.Id}");
+                return selection;
             }
+            return -1;
         }
 
-        private void SearchByType()
+        private void ShowMainMenu()
         {
-            Print(StringConstants.TypeTypeMessage);
-            var typeSearch = Console.ReadLine();
-
-            foreach (var pet in _service.SearchByType(typeSearch))
+            Print(StringConstants.SelectOptions);
+            string[] menuItems =
             {
-                Print($"name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
-            }
-        }
-
-        private void RemovePet()
-        {
-            Print(StringConstants.TypeIdOfPetMessage);
-            var idDelete = int.Parse(Console.ReadLine());
-            if (idDelete != null)
-            {
-                _service.RemovePet(idDelete);
-                Print($"Pet with id {idDelete} was successfully removed from list of pets.");
-            }
-        }
-
-        private void UpdatePet()
-        {
-            Print(StringConstants.TypeIdOfPetMessage);
-            int idUpdate = int.Parse(Console.ReadLine());
-            var petUpdate = _service.SearchById(idUpdate);
+                StringConstants.MenuTextCreateNewPet,
+                StringConstants.MenuTextReadPets,
+                StringConstants.MenuTextUpdatePet,
+                StringConstants.MenuTextDeletePet,
+                StringConstants.MenuTextSearchByType,
+                StringConstants.MenuTextCheapest
+            };
             
-            Print(StringConstants.NewNameMessage);
-            var newName = Console.ReadLine();
-            
-            Print(StringConstants.NewPriceMessage);
-            double newPrice = double.Parse(Console.ReadLine());
-
-            _service.UpdatePet(new Pet()
+            for (int i = 0; i < menuItems.Length; i++)
             {
-                Id = petUpdate.Id,
-                Name = newName,
-                Price = newPrice,
-                Birthday = petUpdate.Birthday,
-                Color = petUpdate.Color,
-                SoldTime = petUpdate.SoldTime,
-                Type = petUpdate.Type
-            });
-            Print($"Pet with if {petUpdate.Name} was succesfully updated. New name: {petUpdate.Name}, new Price = {petUpdate.Price}.");
-        }
-
-        private void ReadAllPets()
-        {
-            foreach (var pet in _service.GetPets())
-            {
-                Print($"Pet type: {pet.Type.Name}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
+                Print($"{(i+1)}: {menuItems[i]}");
             }
         }
-
-        private void ReadAllTypes()
-        {
-            foreach (var type in _petTypeService.GetPetTypes())
-            {
-                Print($"Id: {type.Id}, type: {type.Name}");
-            }
-        }
-
+        
         private void CreatePet()
         {
             Print(StringConstants.CreatePetGreeting);
@@ -139,8 +98,8 @@ namespace Mac.PetShop2021comp1.UI
             //Pet Type
             Print(StringConstants.PetTypeName);
             ReadAllTypes();
-            var typeId = Console.ReadLine();
-            PetType petType = _petTypeService.GetById(Menu.typeId);
+            int typeId = int.Parse(Console.ReadLine());
+            PetType petType = _petTypeService.GetById(typeId);
 
             //Actual pet
             Print(StringConstants.PetNameText);
@@ -171,35 +130,76 @@ namespace Mac.PetShop2021comp1.UI
             Print($"Pet created.\nId: {pet.Id}, pet type: {pet.Type}," +
                   $" name: {pet.Name}, color: {pet.Color}, birthday: {pet.Birthday} sold time: {pet.SoldTime}, price: {pet.Price}/n");
         }
-
-        private int GetMainMenuSelection()
+        
+        private void ReadAllPets()
         {
-            ShowMainMenu();
-            var selectionString = Console.ReadLine();
-            int selection;
-            if (int.TryParse(selectionString, out selection))
+            foreach (var pet in _service.GetPets())
             {
-                return selection;
+                Print($"Pet type: {pet.Type.Name}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
             }
-            return -1;
         }
 
-        private void ShowMainMenu()
+        private void ReadAllTypes()
         {
-            Print(StringConstants.SelectOptions);
-            string[] menuItems =
+            foreach (var type in _petTypeService.GetPetTypes())
             {
-                StringConstants.MenuTextCreateNewPet,
-                StringConstants.MenuTextReadPets,
-                StringConstants.MenuTextUpdatePet,
-                StringConstants.MenuTextDeletePet,
-                StringConstants.MenuTextSearchByType,
-                StringConstants.MenuTextCheapest
-            };
+                Print($"Id: {type.Id}, type: {type.Name}");
+            }
+        }
+
+        private void Get5Cheapest()
+        {
+            Print(StringConstants.CheapestPetsMessage);
+            foreach (var pet in _service.Get5Cheapest())
+            {
+                Print($"price: {pet.Price}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, sold: {pet.SoldTime}, id: {pet.Id}");
+            }
+        }
+
+        private void SearchByType()
+        {
+            Print(StringConstants.TypeTypeMessage);
+            var typeSearch = Console.ReadLine();
+
+            foreach (var pet in _service.SearchByType(typeSearch))
+            {
+                Print($"name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
+            }
+        }
+        
+        private void UpdatePet()
+        {
+            Print(StringConstants.TypeIdOfPetMessage);
+            int idUpdate = int.Parse(Console.ReadLine());
+            var petUpdate = _service.SearchById(idUpdate);
             
-            for (int i = 0; i < menuItems.Length; i++)
+            Print(StringConstants.NewNameMessage);
+            var newName = Console.ReadLine();
+            
+            Print(StringConstants.NewPriceMessage);
+            double newPrice = double.Parse(Console.ReadLine());
+
+            _service.UpdatePet(new Pet()
             {
-                Print($"{(i+1)}: {menuItems[i]}");
+                Id = petUpdate.Id,
+                Name = newName,
+                Price = newPrice,
+                Birthday = petUpdate.Birthday,
+                Color = petUpdate.Color,
+                SoldTime = petUpdate.SoldTime,
+                Type = petUpdate.Type
+            });
+            Print($"Pet with if {petUpdate.Name} was succesfully updated. New name: {petUpdate.Name}, new Price = {petUpdate.Price}.");
+        }
+
+        private void RemovePet()
+        {
+            Print(StringConstants.TypeIdOfPetMessage);
+            var idDelete = int.Parse(Console.ReadLine());
+            if (idDelete != null)
+            {
+                _service.RemovePet(idDelete);
+                Print($"Pet with id {idDelete} was successfully removed from list of pets.");
             }
         }
 

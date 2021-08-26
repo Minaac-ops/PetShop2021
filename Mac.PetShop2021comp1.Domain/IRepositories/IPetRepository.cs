@@ -8,12 +8,11 @@ namespace Mac.PetShop2021comp.Domain.IRepositories
         Pet Create(Pet pet);
 
         IEnumerable<Pet> ReadPets();
+        
+        public Pet ReadById(int id);
 
         Pet Update(Pet petUpdate);
 
         void Delete(int petIdRemove);
-
-        public Pet ReadById(int id);
-
     }
 }
