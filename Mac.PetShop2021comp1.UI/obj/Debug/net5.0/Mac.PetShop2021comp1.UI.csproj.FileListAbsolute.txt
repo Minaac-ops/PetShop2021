@@ -21,3 +21,6 @@ C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.UI\obj\Debug\net5.0\Mac.PetShop2
 C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.UI\obj\Debug\net5.0\ref\Mac.PetShop2021comp1.UI.dll
 C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.UI\obj\Debug\net5.0\Mac.PetShop2021comp1.UI.pdb
 C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.UI\obj\Debug\net5.0\Mac.PetShop2021comp1.UI.genruntimeconfig.cache
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.UI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.UI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.UI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "oPIpxBomiq704yN0YqPw5gnVNZV9sJlQA8ChvEhve/dai6bouNuWnaYPP5TEj1WZHeP530vt6EKBgZVX83oNFw==",
+  "dgSpecHash": "BcO/tNtbcqlwCzDrFc8ggvhVZW3MITH+frityNBKewBnGI8n7cgzTEVKaHs0riBldbsI6Bc4cXOGSWJMlU1NsA==",
   "success": true,
   "projectFilePath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.UI\\Mac.PetShop2021comp1.UI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Bruger\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0-preview.7.21377.19\\microsoft.extensions.dependencyinjection.6.0.0-preview.7.21377.19.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0-preview.7.21377.19\\microsoft.extensions.dependencyinjection.abstractions.6.0.0-preview.7.21377.19.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0-preview.7.21377.19\\system.runtime.compilerservices.unsafe.6.0.0-preview.7.21377.19.nupkg.sha512"
+  ],
   "logs": []
 }
