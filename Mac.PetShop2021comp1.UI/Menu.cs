@@ -229,6 +229,39 @@ namespace Mac.PetShop2021comp1.UI
                 Price = 6000
             };
             _service.Add(pet3);
+            
+            var pet4 = new Pet()
+            {
+                Name = "Rex",
+                Type = "Horse",
+                Birthday = new DateTime(2021, 5, 8),
+                SoldTime = new DateTime(2021, 5, 9),
+                Color = "Black",
+                Price = 30000
+            };
+            _service.Add(pet4);
+            
+            var pet5 = new Pet()
+            {
+                Name = "Goat",
+                Type = "Goat",
+                Birthday = new DateTime(2021, 5, 8),
+                SoldTime = new DateTime(2021, 5, 9),
+                Color = "White",
+                Price = 500
+            };
+            _service.Add(pet5);
+            
+            var pet6 = new Pet()
+            {
+                Name = "Jump",
+                Type = "Rabbit",
+                Birthday = new DateTime(2021, 5, 8),
+                SoldTime = new DateTime(2021, 5, 9),
+                Color = "Brown",
+                Price = 150
+            };
+            _service.Add(pet6);
         }
     }
 }

@@ -10,6 +10,7 @@
         public static readonly string MenuTextUpdatePet = "Update a pet";
         public static readonly string MenuTextDeletePet = "Remove a pet from the list";
         public static readonly string MenuTextSearchByType = "Search for type of pet";
+        public static readonly string MenuTextCheapest = "Show the 5 cheapest pets";
         
         public static readonly string CreatePetGreeting = "Create a new pet to the sales list";
         public static readonly string PetTypeName = "Type of pet";
