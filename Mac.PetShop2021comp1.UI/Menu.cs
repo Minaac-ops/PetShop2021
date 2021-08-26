@@ -56,7 +56,13 @@ namespace Mac.PetShop2021comp1.UI
 
         private void SearchByType()
         {
-            throw new NotImplementedException();
+            Print(StringConstants.TypeTypeMessage);
+            var typeSearch = Console.ReadLine();
+
+            foreach (var pet in _service.SearchByType(typeSearch))
+            {
+                Print($"name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
+            }
         }
 
         private void RemovePet()

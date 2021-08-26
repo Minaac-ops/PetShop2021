@@ -25,5 +25,8 @@
         //Update pet strings
         public static readonly string NewNameMessage = "Type the new name of the pet";
         public static readonly string NewPriceMessage = "Type the new price of the pet";
+        
+        //Search type
+        public static readonly string TypeTypeMessage = "Type what type of animal you want to see";
     }
 }
