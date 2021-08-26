@@ -14,16 +14,22 @@ namespace Mac.PetShop2021comp1.UI
         static void Main(string[] args)
         {
             var serviceCollection = new ServiceCollection();
+            
             serviceCollection.AddScoped<IPetRepository, PetRepositoryInMemory>();
+            serviceCollection.AddScoped<IPetTypeRepository, PetTypeRepositoryInMemory>();
+            
             serviceCollection.AddScoped<IPetService, PetService>();
+            serviceCollection.AddScoped<IPetTypeService, PetTypeService>();
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
             var petService = serviceProvider.GetRequiredService<IPetService>();
 
+            var petTypeService = serviceProvider.GetRequiredService<IPetTypeService>();
+
             //IPetRepository repo = new PetRepositoryInMemory();
             //IPetService service = new PetService(repo);
 
-            var menu = new Menu(petService);
+            var menu = new Menu(petService, petTypeService);
             menu.InitData();
             menu.Start();
         }

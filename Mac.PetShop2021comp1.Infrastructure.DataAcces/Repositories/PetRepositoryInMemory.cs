@@ -10,6 +10,7 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.Repositories
     {
         private static List<Pet> _petTable = new List<Pet>();
         private static int _id = 1;
+
         public Pet Create(Pet pet)
         {
             pet.Id = _id++;

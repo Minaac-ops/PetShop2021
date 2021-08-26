@@ -42,10 +42,10 @@ namespace Mac.PetShop2021comp.Domain.Services
             return _repo.ReadById(id);
         }
 
-        public List<Pet> SearchByType(string type)
+        public List<Pet> SearchByType(string typeName)
         {
             var list = _repo.ReadPets();
-            var searchEnumerable = list.Where(pet => pet.Type == type);
+            var searchEnumerable = list.Where(pet => pet.Type.Name == typeName);
 
             return searchEnumerable.ToList();
         }

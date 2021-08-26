@@ -8,7 +8,7 @@ namespace Mac.PetShop2021comp1.Core.Models
         
         public string Name { get; set; }
         
-        public string Type { get; set; }
+        public PetType Type { get; set; }
         
         public DateTime Birthday { get; set; }
         

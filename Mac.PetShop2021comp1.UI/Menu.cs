@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Mac.PetShop2021comp.Domain.Services;
 using Mac.PetShop2021comp1.Core.IServices;
 using Mac.PetShop2021comp1.Core.Models;
 
@@ -8,12 +9,15 @@ namespace Mac.PetShop2021comp1.UI
 {
     public class Menu
     {
+        private IPetTypeService _petTypeService;
         private IPetService _service;
-        private static int id = 1;
+        private static int petId = 1;
+        private static int typeId = 1;
         
-        public Menu(IPetService service)
+        public Menu(IPetService service, IPetTypeService petTypeService)
         {
             _service = service;
+            _petTypeService = petTypeService;
         }
 
         public void Start()
@@ -116,7 +120,15 @@ namespace Mac.PetShop2021comp1.UI
         {
             foreach (var pet in _service.GetPets())
             {
-                Print($"Pet type: {pet.Type}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
+                Print($"Pet type: {pet.Type.Name}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
+            }
+        }
+
+        private void ReadAllTypes()
+        {
+            foreach (var type in _petTypeService.GetPetTypes())
+            {
+                Print($"Id: {type.Id}, type: {type.Name}");
             }
         }
 
@@ -126,7 +138,9 @@ namespace Mac.PetShop2021comp1.UI
             
             //Pet Type
             Print(StringConstants.PetTypeName);
-            var petType = Console.ReadLine();
+            ReadAllTypes();
+            var typeId = Console.ReadLine();
+            PetType petType = _petTypeService.GetById(Menu.typeId);
 
             //Actual pet
             Print(StringConstants.PetNameText);
@@ -199,7 +213,10 @@ namespace Mac.PetShop2021comp1.UI
             var pet1 = new Pet()
             {
                 Name = "Lassie",
-                Type = "Dog",
+                Type = _petTypeService.CreatePetType(new PetType()
+                {
+                    Name = "Dog"
+                }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
                 Color = "Brown",
@@ -210,7 +227,10 @@ namespace Mac.PetShop2021comp1.UI
             var pet2 = new Pet()
             {
                 Name = "Trine",
-                Type = "Cat",
+                Type = _petTypeService.CreatePetType(new PetType()
+                {
+                    Name = "Rabbit"
+                }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
                 Color = "Black",
@@ -221,7 +241,10 @@ namespace Mac.PetShop2021comp1.UI
             var pet3 = new Pet()
             {
                 Name = "Mathias",
-                Type = "Fox",
+                Type = _petTypeService.CreatePetType(new PetType()
+                {
+                    Name = "Fox"
+                }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
                 Color = "Red",
@@ -232,7 +255,10 @@ namespace Mac.PetShop2021comp1.UI
             var pet4 = new Pet()
             {
                 Name = "Rex",
-                Type = "Horse",
+                Type = _petTypeService.CreatePetType(new PetType()
+                {
+                    Name = "Horse"
+                }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
                 Color = "Black",
@@ -243,7 +269,10 @@ namespace Mac.PetShop2021comp1.UI
             var pet5 = new Pet()
             {
                 Name = "Goat",
-                Type = "Goat",
+                Type = _petTypeService.CreatePetType(new PetType()
+                {
+                    Name = "Goat"
+                }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
                 Color = "White",
@@ -254,7 +283,10 @@ namespace Mac.PetShop2021comp1.UI
             var pet6 = new Pet()
             {
                 Name = "Jump",
-                Type = "Rabbit",
+                Type = _petTypeService.CreatePetType(new PetType()
+                {
+                    Name = "Rabbit"
+                }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
                 Color = "Brown",
