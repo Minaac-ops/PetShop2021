@@ -50,7 +50,19 @@ namespace Mac.PetShop2021comp1.UI
                     case 5:
                         SearchByType();
                         break;
+                    case 6:
+                        Get5Cheapest();
+                        break;
                 }
+            }
+        }
+
+        private void Get5Cheapest()
+        {
+            Print(StringConstants.CheapestPetsMessage);
+            foreach (var pet in _service.Get5Cheapest())
+            {
+                Print($"price: {pet.Price}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, sold: {pet.SoldTime}, id: {pet.Id}");
             }
         }
 
@@ -168,7 +180,8 @@ namespace Mac.PetShop2021comp1.UI
                 StringConstants.MenuTextReadPets,
                 StringConstants.MenuTextUpdatePet,
                 StringConstants.MenuTextDeletePet,
-                StringConstants.MenuTextSearchByType
+                StringConstants.MenuTextSearchByType,
+                StringConstants.MenuTextCheapest
             };
             
             for (int i = 0; i < menuItems.Length; i++)
@@ -191,7 +204,7 @@ namespace Mac.PetShop2021comp1.UI
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
                 Color = "Brown",
-                Price = 5000
+                Price = 4000
             };
             _service.Add(pet1);
             
@@ -213,7 +226,7 @@ namespace Mac.PetShop2021comp1.UI
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
                 Color = "Red",
-                Price = 5000
+                Price = 6000
             };
             _service.Add(pet3);
         }

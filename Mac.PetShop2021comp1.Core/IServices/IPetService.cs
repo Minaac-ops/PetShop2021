@@ -16,5 +16,7 @@ namespace Mac.PetShop2021comp1.Core.IServices
         Pet SearchById(int id);
 
         List<Pet> SearchByType(string type);
+
+        public List<Pet> Get5Cheapest();
     }
 }

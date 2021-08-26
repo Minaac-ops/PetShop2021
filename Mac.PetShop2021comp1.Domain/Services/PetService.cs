@@ -49,5 +49,11 @@ namespace Mac.PetShop2021comp.Domain.Services
 
             return searchEnumerable.ToList();
         }
+
+        public List<Pet> Get5Cheapest()
+        {
+            var enumerable = GetPets().Take(5);
+            return enumerable.ToList();
+        }
     }
 }

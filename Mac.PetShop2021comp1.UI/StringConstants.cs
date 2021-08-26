@@ -28,5 +28,8 @@
         
         //Search type
         public static readonly string TypeTypeMessage = "Type what type of animal you want to see";
+        
+        //5 Cheapest pets
+        public static readonly string CheapestPetsMessage = "Here are the 5 cheapeast pets at the moment!";
     }
 }
