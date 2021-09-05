@@ -9,6 +9,8 @@ namespace Mac.PetShop2021comp.Domain.IRepositories
 
         IEnumerable<Owner> ReadAllOwners();
 
+        Owner ReadById(long id);
+
         Owner UpdateOwner(Owner owner);
 
         void DeleteOwner(int id);

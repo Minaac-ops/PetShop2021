@@ -36,9 +36,13 @@ namespace Mac.PetShop2021.WebAPI
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "Mac.PetShop2021.WebAPI", Version = "v1"});
             });
             services.AddScoped<IPetRepository, PetRepositoryInMemory>();
-            services.AddScoped<IPetTypeRepository, PetTypeRepositoryInMemory>();
             services.AddScoped<IPetService, PetService>();
+            
+            services.AddScoped<IPetTypeRepository, PetTypeRepositoryInMemory>();
             services.AddScoped<IPetTypeService, PetTypeService>();
+            
+            services.AddScoped<IOwnerRepository, OwnerRepository>();
+            services.AddScoped<IOwnerService, OwnerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
