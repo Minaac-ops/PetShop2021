@@ -4,8 +4,10 @@ namespace Mac.PetShop2021comp.Domain.IRepositories
 {
     public interface IInsuranceRepository
     {
-        Insurance getById(int id);
-
         Insurance CreateInsurance(Insurance insurance);
+        Insurance getById(int id);
+        Insurance ReadAll();
+        Insurance UpdateInsurance(int id);
+        void DeleteInsurance(int id);
     }
 }

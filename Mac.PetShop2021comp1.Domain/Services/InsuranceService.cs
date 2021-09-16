@@ -13,15 +13,30 @@ namespace Mac.PetShop2021comp.Domain.Services
             _insuranceRepository = insuranceRepository;
 
         }
-
+        
+        public Insurance CreateInsurance(Insurance insurance)
+        {
+            return _insuranceRepository.CreateInsurance(insurance);
+        }
+        
         public Insurance GetById(int id)
         {
             return _insuranceRepository.getById(id);
         }
-
-        public Insurance CreateInsurance(Insurance insurance)
+        
+        public Insurance ReadAll()
         {
-            return _insuranceRepository.CreateInsurance(insurance);
+            return _insuranceRepository.ReadAll();
+        }
+
+        public Insurance UpdateInsurance(int id)
+        {
+            return _insuranceRepository.UpdateInsurance(id);
+        }
+
+        public void DeleteInsurance(int id)
+        {
+            _insuranceRepository.DeleteInsurance(id);
         }
     }
 }

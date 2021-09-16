@@ -13,19 +13,7 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
         {
             _ctx = ctx;
         }
-
-        public Insurance getById(int id)
-        {
-            return _ctx.Insurances
-                .Select(ie => new Insurance
-                {
-                    Id = ie.Id,
-                    Name = ie.Name,
-                    Price = ie.Price
-                })
-                .FirstOrDefault(i => i.Id == id);
-        }
-
+        
         public Insurance CreateInsurance(Insurance insurance)
         {
             var entity = _ctx.Add(new InsuranceEntity
@@ -40,6 +28,33 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
                 Name = entity.Name,
                 Price = entity.Price
             };
+        }
+
+        public Insurance getById(int id)
+        {
+            return _ctx.Insurances
+                .Select(ie => new Insurance
+                {
+                    Id = ie.Id,
+                    Name = ie.Name,
+                    Price = ie.Price
+                })
+                .FirstOrDefault(i => i.Id == id);
+        }
+        
+        public Insurance ReadAll()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Insurance UpdateInsurance(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DeleteInsurance(int id)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
