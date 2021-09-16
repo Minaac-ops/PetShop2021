@@ -17,5 +17,7 @@ namespace Mac.PetShop2021comp1.Core.Models
         public string Color { get; set; }
         
         public double Price { get; set; }
+        
+        public Owner Owner { get; set; }
     }
 }

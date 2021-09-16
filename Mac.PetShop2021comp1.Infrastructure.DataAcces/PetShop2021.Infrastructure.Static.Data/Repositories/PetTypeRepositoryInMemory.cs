@@ -2,7 +2,7 @@
 using Mac.PetShop2021comp.Domain.IRepositories;
 using Mac.PetShop2021comp1.Core.Models;
 
-namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.Repositories
+namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.PetShop2021.Infrastructure.Static.Data.Repositories
 {
     public class PetTypeRepositoryInMemory : IPetTypeRepository
     {

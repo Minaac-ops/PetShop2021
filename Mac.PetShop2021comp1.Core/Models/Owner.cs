@@ -1,4 +1,6 @@
-﻿namespace Mac.PetShop2021comp1.Core.Models
+﻿using System.Collections.Generic;
+
+namespace Mac.PetShop2021comp1.Core.Models
 {
     public class Owner
     {
@@ -9,5 +11,7 @@
         public string Address { get; set; }
         
         public string Email { get; set; }
+        
+        public List<Pet> Pets { get; set; }
     }
 }

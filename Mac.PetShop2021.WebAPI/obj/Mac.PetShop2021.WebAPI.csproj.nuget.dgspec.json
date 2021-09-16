@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021.WebAPI\\Mac.PetShop2021.WebAPI.csproj": {}
+    "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021.WebAPI\\Mac.PetShop2021.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021.WebAPI\\Mac.PetShop2021.WebAPI.csproj": {
+    "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021.WebAPI\\Mac.PetShop2021.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021.WebAPI\\Mac.PetShop2021.WebAPI.csproj",
+        "projectUniqueName": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021.WebAPI\\Mac.PetShop2021.WebAPI.csproj",
         "projectName": "Mac.PetShop2021.WebAPI",
-        "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021.WebAPI\\Mac.PetShop2021.WebAPI.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021.WebAPI\\obj\\",
+        "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021.WebAPI\\Mac.PetShop2021.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\annec\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\annec\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,14 +32,20 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
-                "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
               },
-              "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
-                "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj"
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj"
               },
-              "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj": {
-                "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj"
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.EFCore\\Mac.PetShop2021comp1.EFCore.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.EFCore\\Mac.PetShop2021comp1.EFCore.csproj"
+              },
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj"
+              },
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.Data\\Mac.PetShop2021comp1.Infrastructure.Data.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.Data\\Mac.PetShop2021comp1.Infrastructure.Data.csproj"
               }
             }
           }
@@ -54,6 +60,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
@@ -85,20 +99,20 @@
         }
       }
     },
-    "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
+    "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj",
+        "projectUniqueName": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj",
         "projectName": "Mac.PetShop2021comp1.Core",
-        "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\obj\\",
+        "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj",
+        "packagesPath": "C:\\Users\\annec\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\annec\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -143,20 +157,20 @@
         }
       }
     },
-    "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
+    "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj",
+        "projectUniqueName": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj",
         "projectName": "Mac.PetShop2021comp1.Domain",
-        "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\obj\\",
+        "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj",
+        "packagesPath": "C:\\Users\\annec\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\annec\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -171,8 +185,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
-                "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
               }
             }
           }
@@ -205,20 +219,20 @@
         }
       }
     },
-    "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj": {
+    "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.EFCore\\Mac.PetShop2021comp1.EFCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj",
-        "projectName": "Mac.PetShop2021comp1.Infrastructure.DataAcces",
-        "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\obj\\",
+        "projectUniqueName": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.EFCore\\Mac.PetShop2021comp1.EFCore.csproj",
+        "projectName": "Mac.PetShop2021comp1.EFCore",
+        "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.EFCore\\Mac.PetShop2021comp1.EFCore.csproj",
+        "packagesPath": "C:\\Users\\annec\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.EFCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\annec\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -233,11 +247,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
-                "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
-              },
-              "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
-                "projectPath": "C:\\Work\\sdp.21\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj"
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj"
               }
             }
           }
@@ -251,6 +262,148 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj",
+        "projectName": "Mac.PetShop2021comp1.Infrastructure.DataAcces",
+        "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj",
+        "packagesPath": "C:\\Users\\annec\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.DataAcces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\annec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
+              },
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.Data\\Mac.PetShop2021comp1.Infrastructure.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.Data\\Mac.PetShop2021comp1.Infrastructure.Data.csproj",
+        "projectName": "Mac.PetShop2021comp1.Infrastructure.Data",
+        "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.Data\\Mac.PetShop2021comp1.Infrastructure.Data.csproj",
+        "packagesPath": "C:\\Users\\annec\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Infrastructure.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\annec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Core\\Mac.PetShop2021comp1.Core.csproj"
+              },
+              "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj": {
+                "projectPath": "C:\\Work\\PetShop2021\\PetShop2021\\Mac.PetShop2021comp1.Domain\\Mac.PetShop2021comp1.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

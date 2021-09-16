@@ -8,11 +8,13 @@ namespace Mac.PetShop2021comp.Domain.Services
 {
     public class OwnerService : IOwnerService
     {
-        private IOwnerRepository _ownerRepo;
+        readonly IOwnerRepository _ownerRepo;
+        readonly IPetRepository _petRepo;
 
-        public OwnerService(IOwnerRepository ownerRepo)
+        public OwnerService(IOwnerRepository ownerRepo, IPetRepository petRepository)
         {
             _ownerRepo = ownerRepo;
+            _petRepo = petRepository;
         }
         
         public Owner Create(Owner owner)
@@ -25,6 +27,14 @@ namespace Mac.PetShop2021comp.Domain.Services
             var list = _ownerRepo.ReadAllOwners();
             var orderedEnumerable = list.OrderBy(owner => owner.OwnerName);
             return orderedEnumerable.ToList();
+        }
+
+        public Owner FindByIdIncludePet(int id)
+        {
+            var owner = _ownerRepo.ReadById(id);
+            owner.Pets = _petRepo.ReadPets().Where(pet => pet.Owner.Id == owner.Id).ToList();
+            
+            return owner;
         }
 
         public Owner UpdateOwner(Owner owner)

@@ -10,3 +10,15 @@ C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetSho
 C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.dll
 C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\ref\Mac.PetShop2021comp1.Core.dll
 C:\Work\sdp.21\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.pdb
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\bin\Debug\net5.0\Mac.PetShop2021comp1.Core.deps.json
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\bin\Debug\net5.0\Mac.PetShop2021comp1.Core.dll
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\bin\Debug\net5.0\ref\Mac.PetShop2021comp1.Core.dll
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\bin\Debug\net5.0\Mac.PetShop2021comp1.Core.pdb
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.csproj.AssemblyReference.cache
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.AssemblyInfoInputs.cache
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.AssemblyInfo.cs
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.csproj.CoreCompileInputs.cache
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.dll
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\ref\Mac.PetShop2021comp1.Core.dll
+C:\Work\PetShop2021\PetShop2021\Mac.PetShop2021comp1.Core\obj\Debug\net5.0\Mac.PetShop2021comp1.Core.pdb
