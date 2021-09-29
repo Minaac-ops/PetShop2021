@@ -15,5 +15,8 @@ namespace Mac.PetShop2021comp1.EFCore.Entities
         public PetTypeEntity PetType { get; set; }
         public int InsuranceId { get; set; }
         public InsuranceEntity Insurance { get; set; }
+        public int OwnerId { get; set; }
+        public OwnerEntity Owner { get; set; }
+        
     }
 }

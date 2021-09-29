@@ -13,6 +13,6 @@ namespace Mac.PetShop2021comp1.Core.IServices
 
         Owner UpdateOwner(Owner owner);
 
-        void DeleteOwner(int id);
+        Owner DeleteOwner(int id);
     }
 }

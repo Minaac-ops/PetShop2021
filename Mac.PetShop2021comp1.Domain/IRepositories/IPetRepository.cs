@@ -13,6 +13,6 @@ namespace Mac.PetShop2021comp.Domain.IRepositories
 
         Pet Update(Pet petUpdate);
 
-        void Delete(int petIdRemove);
+        Pet Delete(int petIdRemove);
     }
 }

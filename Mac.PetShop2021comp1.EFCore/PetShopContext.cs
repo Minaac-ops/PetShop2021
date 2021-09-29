@@ -27,10 +27,20 @@ namespace Mac.PetShop2021comp1.EFCore
             modelBuilder.Entity<InsuranceEntity>()
                 .HasData(new InsuranceEntity()
                     {Id = 3, Name = "DogInsurance", Price = 50});
+
+            modelBuilder.Entity<OwnerEntity>().HasData(new OwnerEntity
+            {
+                Id = 1, Address = "Vejen 2", Email = "hejsa@live.dk", OwnerName = "Trine"
+            });
+            modelBuilder.Entity<OwnerEntity>().HasData(new OwnerEntity
+            {
+                Id = 2, Address = "Vejen 5", Email = "jegertræt@live.dk", OwnerName = "Mathias"
+            });
         }
 
         public DbSet<InsuranceEntity> Insurances { get; set; }
         public DbSet<PetEntity> Pets { get; set; }
         public DbSet<PetTypeEntity> PetTypes { get; set; }
+        public DbSet<OwnerEntity> Owners { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Mac.PetShop2021comp1.Core.Models;
+﻿using System.Collections.Generic;
+using Mac.PetShop2021comp1.Core.Models;
 
 namespace Mac.PetShop2021comp1.Core.IServices
 {
@@ -6,8 +7,8 @@ namespace Mac.PetShop2021comp1.Core.IServices
     { 
         Insurance CreateInsurance(Insurance insurance);
         Insurance GetById(int id);
-        Insurance ReadAll();
-        Insurance UpdateInsurance(int id);
-        void DeleteInsurance(int id);
+        List<Insurance> ReadAll();
+        Insurance UpdateInsurance(Insurance insurance);
+        Insurance DeleteInsurance(int id);
     }
 }

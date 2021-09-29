@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Mac.PetShop2021.WebAPI;
 using Mac.PetShop2021comp.Domain.IRepositories;
 using Mac.PetShop2021comp1.Core.IServices;
 using Mac.PetShop2021comp1.Core.Models;
@@ -22,20 +21,10 @@ namespace Mac.PetShop2021comp.Domain.Services
             return _repo.Create(pet);
         }
 
-        public List<Pet> GetPets(Filter filter)
+        public List<Pet> GetPets()
         {
-            var list = _repo.ReadPets(filter);
+            var list = _repo.ReadPets();
             var orderedEnumerable = list.OrderBy(pet => pet.Price);
-            if (filter == null || filter.Limit < 0 || filter.Limit >100)
-            {
-                throw new ArgumentException("Filter limit must be between 1-100.");
-            }
-
-            if (filter.Page < 1)
-            {
-                throw new ArgumentException("Filter limit must be above 0");
-            }
-
             return orderedEnumerable.ToList();
         }
         
@@ -63,9 +52,9 @@ namespace Mac.PetShop2021comp.Domain.Services
             return _repo.Update(petUpdate);
         }
 
-        public void RemovePet(int id)
+        public Pet RemovePet(int id)
         {
-            _repo.Delete(id);
+            return _repo.Delete(id);
         }
     }
 }

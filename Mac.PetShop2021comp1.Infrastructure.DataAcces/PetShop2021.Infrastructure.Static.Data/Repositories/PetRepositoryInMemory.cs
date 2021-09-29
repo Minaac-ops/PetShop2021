@@ -67,13 +67,16 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.PetShop2021.Infrastructu
             return null;
         }
 
-        public void Delete(int petIdRemove)
+        public Pet Delete(int petIdRemove)
         {
             var petFound = ReadById(petIdRemove);
             if (petFound != null)
             {
                 FakeDb.Pets.Remove(petFound);
+                return petFound;
             }
+
+            return null;
         }
 
         public Pet ReadById(int id)

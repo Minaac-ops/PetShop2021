@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Mac.PetShop2021.WebAPI;
 using Mac.PetShop2021comp.Domain.IRepositories;
 using Mac.PetShop2021comp1.Core.Models;
 using Mac.PetShop2021comp1.EFCore.Entities;
-using Microsoft.EntityFrameworkCore;
 
 namespace Mac.PetShop2021comp1.EFCore.Repositories
 {
@@ -37,21 +35,16 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
             };
         }
 
-        public IEnumerable<Pet> ReadPets(Filter filter)
+        public IEnumerable<Pet> ReadPets()
         {
             return _ctx.Pets
-                .Skip((filter.Page -1) * filter.Limit)
-                .Take(filter.Limit)
-                .Select(p => new Pet()
+                .Select(p => new Pet
                 {
                     Id = p.Id,
-                    Birthday = p.Birthday,
-                    Color = p.Color,
                     Name = p.Name,
-                    Price = p.Price,
+                    Birthday = p.Birthday,
                     SoldTime = p.SoldTime,
-                    InsuranceId = p.InsuranceId,
-                    PetTypeId = p.PetTypeId
+                    Price = p.Price
                 }).ToList();
         }
 
@@ -61,15 +54,11 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
                 .Select(p => new Pet
                 {
                     Id = p.Id,
-                    Birthday = p.Birthday,
-                    Color = p.Color,
                     Name = p.Name,
                     Price = p.Price,
-                    SoldTime = p.SoldTime,
-                    InsuranceId = p.InsuranceId,
-                    PetTypeId = p.PetTypeId
-                })
-                .FirstOrDefault(p => p.Id == id);
+                    Birthday = p.Birthday,
+                    SoldTime = p.SoldTime
+                }).FirstOrDefault(p => p.Id == id);
         }
 
         public Pet Update(Pet petUpdate)
@@ -93,10 +82,14 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
             };
         }
 
-        public void Delete(int petIdRemove)
+        public Pet Delete(int petIdRemove)
         {
-            _ctx.Remove(new PetEntity() {Id = petIdRemove});
+            _ctx.Pets.Remove(new PetEntity() {Id = petIdRemove});
             _ctx.SaveChanges();
+            return new Pet
+            {
+                Id = petIdRemove
+            };
         }
     }
 }

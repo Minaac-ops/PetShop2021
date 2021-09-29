@@ -26,7 +26,7 @@ namespace Mac.PetShop2021comp.Domain.Services
             return _insuranceRepository.getById(id);
         }
         
-        public IEnumerable<Insurance> ReadAll()
+        public List<Insurance> ReadAll()
         {
             return _insuranceRepository.ReadAll().ToList();
         }

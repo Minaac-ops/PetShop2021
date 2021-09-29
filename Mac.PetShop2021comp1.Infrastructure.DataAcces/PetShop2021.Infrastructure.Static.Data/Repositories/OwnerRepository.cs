@@ -58,13 +58,15 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.PetShop2021.Infrastructu
             return owner;
         }
 
-        public void DeleteOwner(int id)
+        public Owner DeleteOwner(int id)
         {
             var ownerFound = ReadById(id);
             if (ownerFound != null)
             {
                 FakeDb.Owners.Remove(ownerFound);
+                return ownerFound;
             }
+            return null;
         }
     }
 }

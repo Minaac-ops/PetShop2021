@@ -42,9 +42,9 @@ namespace Mac.PetShop2021comp.Domain.Services
             return _ownerRepo.UpdateOwner(owner);
         }
 
-        public void DeleteOwner(int id)
+        public Owner DeleteOwner(int id)
         {
-            _ownerRepo.DeleteOwner(id);
+            return _ownerRepo.DeleteOwner(id);
         }
     }
 }

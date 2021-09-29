@@ -57,11 +57,15 @@ namespace Mac.PetShop2021.WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult<Insurance> UpdateInsurance(int id)
+        public ActionResult<Insurance> UpdateInsurance(long id, [FromBody] Insurance insurance)
         {
             try
             {
-                return Ok(_insuranceService.UpdateInsurance(id));
+                if (insurance.Id != id)
+                {
+                    return BadRequest("ID does not match");
+                }
+                return Ok(_insuranceService.UpdateInsurance(insurance));
             }
             catch (Exception e)
             {

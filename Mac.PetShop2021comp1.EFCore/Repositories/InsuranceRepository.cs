@@ -9,7 +9,7 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
     public class InsuranceRepository : IInsuranceRepository
     {
         private readonly PetShopContext _ctx;
-        
+
         public InsuranceRepository(PetShopContext ctx)
         {
             _ctx = ctx;
@@ -43,7 +43,7 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
                 .FirstOrDefault(i => i.Id == id);
         }
         
-        public List<Insurance> ReadAll()
+        public IEnumerable<Insurance> ReadAll()
         {
             return _ctx.Insurances
                 .Select(i => new Insurance
@@ -62,7 +62,7 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
                 Name = insurance.Name,
                 Price = insurance.Price
             };
-            var entity = _ctx.Update(insurance).Entity;
+            var entity = _ctx.Update(insuranceEntity).Entity;
             _ctx.SaveChanges();
             return new Insurance
             {

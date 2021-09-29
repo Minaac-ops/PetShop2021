@@ -13,6 +13,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using IPetTypeRepository = Mac.PetShop2021comp.Domain.IRepositories.IPetTypeRepository;
+using OwnerRepository = Mac.PetShop2021comp1.EFCore.Repositories.OwnerRepository;
+
 namespace Mac.PetShop2021.WebAPI
 {
     public class Startup
@@ -49,7 +52,7 @@ namespace Mac.PetShop2021.WebAPI
             services.AddScoped<IPetRepository, PetRepositoryInMemory>();
             services.AddScoped<IPetService, PetService>();
             
-            services.AddScoped<IPetTypeRepository, PetTypeRepositoryInMemory>();
+            services.AddScoped<IPetTypeRepository, PetTypeRepository>();
             services.AddScoped<IPetTypeService, PetTypeService>();
 
             services.AddScoped<IOwnerRepository, OwnerRepository>();
