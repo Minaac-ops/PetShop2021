@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Mac.PetShop2021comp.Domain.IRepositories;
 using Mac.PetShop2021comp1.Core.Models;
 using Mac.PetShop2021comp1.EFCore.Entities;
@@ -42,19 +43,43 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
                 .FirstOrDefault(i => i.Id == id);
         }
         
-        public Insurance ReadAll()
+        public List<Insurance> ReadAll()
         {
-            throw new System.NotImplementedException();
+            return _ctx.Insurances
+                .Select(i => new Insurance
+                {
+                    Id = i.Id,
+                    Name = i.Name,
+                    Price = i.Price
+                }).ToList();
         }
 
-        public Insurance UpdateInsurance(int id)
+        public Insurance UpdateInsurance(Insurance insurance)
         {
-            throw new System.NotImplementedException();
+            var insuranceEntity = new InsuranceEntity
+            {
+                Id = insurance.Id,
+                Name = insurance.Name,
+                Price = insurance.Price
+            };
+            var entity = _ctx.Update(insurance).Entity;
+            _ctx.SaveChanges();
+            return new Insurance
+            {
+                Id = entity.Id,
+                Name = entity.Name,
+                Price = entity.Price
+            };
         }
 
-        public void DeleteInsurance(int id)
+        public Insurance DeleteInsurance(int id)
         {
-            throw new System.NotImplementedException();
+            var entity = _ctx.Remove(new InsuranceEntity{Id = id}).Entity;
+            _ctx.SaveChanges();
+            return new Insurance
+            {
+                Id = entity.Id,
+            };
         }
     }
 }

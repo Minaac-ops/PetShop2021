@@ -1,4 +1,6 @@
-﻿using Mac.PetShop2021comp.Domain.IRepositories;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Mac.PetShop2021comp.Domain.IRepositories;
 using Mac.PetShop2021comp1.Core.IServices;
 using Mac.PetShop2021comp1.Core.Models;
 
@@ -24,19 +26,19 @@ namespace Mac.PetShop2021comp.Domain.Services
             return _insuranceRepository.getById(id);
         }
         
-        public Insurance ReadAll()
+        public IEnumerable<Insurance> ReadAll()
         {
-            return _insuranceRepository.ReadAll();
+            return _insuranceRepository.ReadAll().ToList();
         }
 
-        public Insurance UpdateInsurance(int id)
+        public Insurance UpdateInsurance(Insurance insurance)
         {
-            return _insuranceRepository.UpdateInsurance(id);
+            return _insuranceRepository.UpdateInsurance(insurance);
         }
 
-        public void DeleteInsurance(int id)
+        public Insurance DeleteInsurance(int id)
         {
-            _insuranceRepository.DeleteInsurance(id);
+            return _insuranceRepository.DeleteInsurance(id);
         }
     }
 }
