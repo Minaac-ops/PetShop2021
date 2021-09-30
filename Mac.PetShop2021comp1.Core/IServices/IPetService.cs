@@ -5,18 +5,13 @@ namespace Mac.PetShop2021comp1.Core.IServices
 {
     public interface IPetService
     {
+        int TotalCount();
         Pet Add(Pet pet);
 
-        List<Pet> GetPets();
-        
-        public List<Pet> Get5Cheapest();
-        
+        List<Pet> GetPets(Filter.Filter filter);
+
         Pet UpdatePet(Pet pet);
 
         Pet RemovePet(int id);
-        
-        Pet SearchById(int id);
-
-        List<Pet> SearchByType(string type);
     }
 }

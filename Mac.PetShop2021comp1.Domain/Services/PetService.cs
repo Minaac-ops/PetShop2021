@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Mac.PetShop2021comp.Domain.IRepositories;
+using Mac.PetShop2021comp1.Core.Filter;
 using Mac.PetShop2021comp1.Core.IServices;
 using Mac.PetShop2021comp1.Core.Models;
 
@@ -21,30 +22,25 @@ namespace Mac.PetShop2021comp.Domain.Services
             return _repo.Create(pet);
         }
 
-        public List<Pet> GetPets()
+        public List<Pet> GetPets(Filter filter)
         {
-            var list = _repo.ReadPets();
-            var orderedEnumerable = list.OrderBy(pet => pet.Price);
-            return orderedEnumerable.ToList();
-        }
-        
-        public Pet SearchById(int id)
-        {
-            return _repo.ReadById(id);
-        }
+            if (filter == null || filter.Limit < 1 || filter.Limit > 100)
+            {
+                throw new ArgumentException("Filter limit must be between 1-100");
+            }
 
-        public List<Pet> SearchByType(string typeName)
-        {
-            var list = _repo.ReadPets();
-            var searchEnumerable = list.Where(pet => pet.Type.Name == typeName);
-
-            return searchEnumerable.ToList();
+            var totalCount = TotalCount();
+            var maxPageCount = Math.Ceiling((double) totalCount / filter.Limit);
+            if (filter.Page < 1 || filter.Page > maxPageCount)
+            {
+                throw new ArgumentException($"$Filter page must be between 1-{maxPageCount}");
+            }
+            return _repo.ReadPets(filter).ToList();
         }
 
-        public List<Pet> Get5Cheapest()
+        public int TotalCount()
         {
-            var enumerable = GetPets().Take(5);
-            return enumerable.ToList();
+            return _repo.TotalCount();
         }
         
         public Pet UpdatePet(Pet petUpdate)

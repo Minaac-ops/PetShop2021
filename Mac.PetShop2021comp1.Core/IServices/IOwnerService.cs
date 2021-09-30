@@ -9,7 +9,7 @@ namespace Mac.PetShop2021comp1.Core.IServices
 
         List<Owner> ReadAllOwners();
         
-        Owner FindByIdIncludePet(int id);
+        Owner FindByIdIncludePet(int id, Filter.Filter filter);
 
         Owner UpdateOwner(Owner owner);
 
