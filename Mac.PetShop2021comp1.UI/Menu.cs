@@ -146,6 +146,26 @@ namespace Mac.PetShop2021comp1.UI
                 Print($"Id: {type.Id}, type: {type.Name}");
             }
         }
+
+        private void Get5Cheapest()
+        {
+            Print(StringConstants.CheapestPetsMessage);
+            foreach (var pet in _service.Get5Cheapest())
+            {
+                Print($"price: {pet.Price}, name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, sold: {pet.SoldTime}, id: {pet.Id}");
+            }
+        }
+
+        private void SearchByType()
+        {
+            Print(StringConstants.TypeTypeMessage);
+            var typeSearch = Console.ReadLine();
+
+            foreach (var pet in _service.SearchByType(typeSearch))
+            {
+                Print($"name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
+            }
+        }
         
         private void UpdatePet()
         {

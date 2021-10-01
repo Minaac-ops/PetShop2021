@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Mac.PetShop2021comp.Domain.IRepositories;
-using Mac.PetShop2021comp1.Core.Filter;
 using Mac.PetShop2021comp1.Core.IServices;
 using Mac.PetShop2021comp1.Core.Models;
 
@@ -30,10 +29,10 @@ namespace Mac.PetShop2021comp.Domain.Services
             return orderedEnumerable.ToList();
         }
 
-        public Owner FindByIdIncludePet(int id, Filter filter)
+        public Owner FindByIdIncludePet(int id)
         {
             var owner = _ownerRepo.ReadById(id);
-            owner.Pets = _petRepo.ReadPets(filter).Where(pet => pet.Owner.Id == owner.Id).ToList();
+            owner.Pets = _petRepo.ReadPets().Where(pet => pet.Owner.Id == owner.Id).ToList();
             
             return owner;
         }

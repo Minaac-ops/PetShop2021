@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Mac.PetShop2021comp.Domain.IRepositories;
-using Mac.PetShop2021comp1.Core.Filter;
 using Mac.PetShop2021comp1.Core.Models;
 using Mac.PetShop2021comp1.EFCore.Entities;
 
@@ -10,15 +9,10 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
     public class PetRepository : IPetRepository
     {
         private readonly PetShopContext _ctx;
-
+        
         public PetRepository(PetShopContext ctx)
         {
             _ctx = ctx;
-        }
-
-        public int TotalCount()
-        {
-            return _ctx.Pets.Count();
         }
 
         public Pet Create(Pet pet)
@@ -30,7 +24,7 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
                 SoldTime = pet.SoldTime
             };
             var afterSaveEntity = _ctx.Pets.Add(beforeSaveEntity).Entity;
-
+            
             _ctx.SaveChanges();
             return new Pet()
             {
@@ -41,47 +35,17 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
             };
         }
 
-        public IEnumerable<Pet> ReadPets(Filter filter)
+        public IEnumerable<Pet> ReadPets()
         {
-            var selectQuery = _ctx.Pets.Select(pe => new Pet
-            {
-                Id = pe.Id,
-                Birthday = pe.Birthday,
-                Color = pe.Color,
-                Name = pe.Name,
-                Price = pe.Price,
-                SoldTime = pe.SoldTime
-            });
-            if (filter.OrderDir.ToLower().Equals("asc"))
-            {
-                switch (filter.OrderBy.ToLower())
+            return _ctx.Pets
+                .Select(p => new Pet
                 {
-                    case "name":
-                        selectQuery = selectQuery.OrderBy(p => p.Name);
-                        break;
-                    case "id":
-                        selectQuery = selectQuery.OrderBy(p => p.Id);
-                        break;
-                }
-            }
-            else
-            {
-                switch (filter.OrderBy.ToLower())
-                {
-                    case "name":
-                        selectQuery = selectQuery.OrderByDescending(p => p.Name);
-                        break;
-                    case "id":
-                        selectQuery = selectQuery.OrderByDescending(p => p.Id);
-                        break;
-                }
-            }
-
-            selectQuery = selectQuery.Where(p => p.Name.ToLower().StartsWith(filter.Search.ToLower()));
-            var query = selectQuery
-                .Skip((filter.Page - 1) * filter.Limit)
-                .Take((filter.Limit));
-            return query.ToList();
+                    Id = p.Id,
+                    Name = p.Name,
+                    Birthday = p.Birthday,
+                    SoldTime = p.SoldTime,
+                    Price = p.Price
+                }).ToList();
         }
 
         public Pet ReadById(int id)
@@ -107,7 +71,7 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
                 SoldTime = petUpdate.SoldTime
             };
             var afterSaveEntity = _ctx.Pets.Update(beforeSaveEntity).Entity;
-
+            
             _ctx.SaveChanges();
             return new Pet()
             {
