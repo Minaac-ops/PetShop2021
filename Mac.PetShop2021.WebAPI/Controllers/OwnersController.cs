@@ -40,12 +40,12 @@ namespace Mac.PetShop2021.WebAPI.Controllers
             return Ok(_ownerService.ReadAllOwners());
         }
 
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         public ActionResult<Owner> Get(int id)
         {
             if (id < 1) return BadRequest("Id must be greater than 0");
             return _ownerService.FindByIdIncludePet(id);
-        }
+        }*/
 
         [HttpPut("{id}")]
         public ActionResult<Owner> UpdateOwner(long id, Owner owner)

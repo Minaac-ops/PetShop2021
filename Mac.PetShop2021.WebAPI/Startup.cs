@@ -49,7 +49,7 @@ namespace Mac.PetShop2021.WebAPI
                     UseSqlite("Data Source = MyDatabase.db"); 
                 });
 
-            services.AddScoped<IPetRepository, PetRepositoryInMemory>();
+            services.AddScoped<IPetRepository, PetRepository>();
             services.AddScoped<IPetService, PetService>();
             
             services.AddScoped<IPetTypeRepository, PetTypeRepository>();

@@ -8,6 +8,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Mac.PetShop2021comp1.Core\Mac.PetShop2021comp1.Core.csproj" />
       <ProjectReference Include="..\Mac.PetShop2021comp1.Domain\Mac.PetShop2021comp1.Domain.csproj" />
+      <ProjectReference Include="..\Mac.PetShop2021comp1.EFCore\Mac.PetShop2021comp1.EFCore.csproj" />
       <ProjectReference Include="..\Mac.PetShop2021comp1.Infrastructure.DataAcces\Mac.PetShop2021comp1.Infrastructure.DataAcces.csproj" />
     </ItemGroup>
 

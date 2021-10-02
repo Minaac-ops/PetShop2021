@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Mac.PetShop2021comp.Domain.IRepositories;
+using Mac.PetShop2021comp1.Core.Filtering;
 using Mac.PetShop2021comp1.Core.Models;
 
 namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.PetShop2021.Infrastructure.Static.Data.Repositories
@@ -43,11 +44,21 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.PetShop2021.Infrastructu
             FakeDb.Pets.Add(pet2);
         }
 
+        public int TotalCount()
+        {
+            throw new NotImplementedException();
+        }
+
         public Pet Create(Pet pet)
         {
             FakeDb.Id++;
             FakeDb.Pets.Add(pet);
             return pet;
+        }
+
+        public IEnumerable<Pet> ReadPets(Filter filter)
+        {
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Pet> ReadPets()

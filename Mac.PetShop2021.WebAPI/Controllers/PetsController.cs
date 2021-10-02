@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Mac.PetShop2021.WebAPI.Dtos;
+using Mac.PetShop2021comp1.Core.Filtering;
 using Mac.PetShop2021comp1.Core.IServices;
 using Mac.PetShop2021comp1.Core.Models;
 using Microsoft.AspNetCore.Http;
@@ -32,14 +34,28 @@ namespace Mac.PetShop2021.WebAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Pet>> GetAll()
+        public ActionResult<GetAllPetDto> GetAll([FromQuery] Filter filter)
         {
-            if (_petService.GetPets() == null)
+            try
             {
-                return BadRequest("There is no pets in the petshop");
+                var list = _petService.GetPets(filter);
+                return Ok(new GetAllPetDto
+                {
+                    List = list.Select(p => new GetPetDto
+                    {
+                        id = p.Id,
+                        Name = p.Name
+                    }).ToList()
+                });
             }
-
-            return _petService.GetPets();
+            catch (ArgumentException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.StackTrace);
+            }
         }
 
         [HttpPut("{id}")]
@@ -58,12 +74,5 @@ namespace Mac.PetShop2021.WebAPI.Controllers
         {
             _petService.RemovePet(id);
         }
-
-        /*[HttpGet("id}")]
-        public ActionResult<Pet> ReadById(long id)
-        {
-            Pet pet = _petService.SearchById(id);
-            return Ok(pet);
-        }*/
     }
 }

@@ -20,7 +20,7 @@ namespace Mac.PetShop2021comp1.UI
             _petTypeService = petTypeService;
         }
 
-        public void Start()
+        /*public void Start()
         {
             ShowWelcomeGreeting();
             StartLoop();
@@ -31,7 +31,7 @@ namespace Mac.PetShop2021comp1.UI
             Print(StringConstants.WelcomeGreeting);
         }
 
-        private void StartLoop()
+        /*private void StartLoop()
         {
             int choice;
             while ((choice = GetMainMenuSelection()) != 0)
@@ -91,7 +91,7 @@ namespace Mac.PetShop2021comp1.UI
             }
         }
         
-        private void CreatePet()
+        /*private void CreatePet()
         {
             Print(StringConstants.CreatePetGreeting);
             
@@ -131,7 +131,7 @@ namespace Mac.PetShop2021comp1.UI
                   $" name: {pet.Name}, color: {pet.Color}, birthday: {pet.Birthday} sold time: {pet.SoldTime}, price: {pet.Price}/n");
         }
         
-        private void ReadAllPets()
+        /*private void ReadAllPets()
         {
             foreach (var pet in _service.GetPets())
             {
@@ -165,7 +165,7 @@ namespace Mac.PetShop2021comp1.UI
             {
                 Print($"name: {pet.Name}, birthday: {pet.Birthday}, color: {pet.Color}, price: {pet.Price}, sold: {pet.SoldTime}, id: {pet.Id}");
             }
-        }
+        }*/
         
         private void UpdatePet()
         {

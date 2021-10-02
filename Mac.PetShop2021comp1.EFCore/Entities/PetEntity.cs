@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Mac.PetShop2021comp1.Core.Models;
 
 namespace Mac.PetShop2021comp1.EFCore.Entities
@@ -9,7 +10,6 @@ namespace Mac.PetShop2021comp1.EFCore.Entities
         public string Name { get; set; }
         public DateTime Birthday { get; set; }
         public DateTime SoldTime { get; set; }
-        public string Color { get; set; }
         public double Price { get; set; }
         public int PetTypeId { get; set; }
         public PetTypeEntity PetType { get; set; }
@@ -18,5 +18,7 @@ namespace Mac.PetShop2021comp1.EFCore.Entities
         public int OwnerId { get; set; }
         public OwnerEntity Owner { get; set; }
         
+        public List<PetColorEntity> Colors { get; set; }
+
     }
 }
