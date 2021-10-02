@@ -50,9 +50,9 @@ namespace Mac.PetShop2021comp1.EFCore
 
             //Owners
             modelBuilder.Entity<OwnerEntity>()
-                .HasData(new OwnerEntity {Id = 1, Address = "Grønnegade 77", Email = "mac@live.dk", OwnerName = "Anne"});
+                .HasData(new OwnerEntity {Id = 1, Address = "Grønnegade 77", Email = "mac@live.dk", OwnerName = "Mina Anne Christensen"});
             modelBuilder.Entity<OwnerEntity>()
-                .HasData(new OwnerEntity {Id = 2, Address = "Skolgade 66", Email = "tak@live.dk", OwnerName = "Trine"});
+                .HasData(new OwnerEntity {Id = 2, Address = "Skolgade 66", Email = "tak@live.dk", OwnerName = "Trine Agnete Knudsen"});
             
             //Colors
             modelBuilder.Entity<ColorEntity>()
