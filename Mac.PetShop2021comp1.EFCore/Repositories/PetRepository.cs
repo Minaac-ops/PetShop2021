@@ -41,11 +41,11 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
             var selectQuery = _ctx.Pets.Select(pe => new Pet
             {
                 Id = pe.Id,
-                Name = pe.Name
-                //Colors = pe.Colors.Select(pce => new Color(){
-                //Id = pce.Color.Id,
-                //Name = pce.Color.Name
-                //}).ToList()
+                Name = pe.Name,
+                Colors = pe.Colors.Select(pce => new Color(){
+                    Id = pce.Color.Id, 
+                    ColorName= pce.Color.Color
+                }).ToList()
             });
             if (filter.OrderDir.ToLower().Equals("asc"))
             {

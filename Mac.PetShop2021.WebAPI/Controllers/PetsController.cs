@@ -43,8 +43,10 @@ namespace Mac.PetShop2021.WebAPI.Controllers
                 {
                     List = list.Select(p => new GetPetDto
                     {
-                        id = p.Id,
-                        Name = p.Name
+                        Id = p.Id,
+                        Name = p.Name,
+                        Price = p.Price,
+                        Colors = p.Colors
                     }).ToList()
                 });
             }

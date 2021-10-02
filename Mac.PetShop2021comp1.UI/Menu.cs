@@ -20,10 +20,10 @@ namespace Mac.PetShop2021comp1.UI
             _petTypeService = petTypeService;
         }
 
-        /*public void Start()
+        public void Start()
         {
             ShowWelcomeGreeting();
-            StartLoop();
+            //StartLoop();
         }
 
         private void ShowWelcomeGreeting()
@@ -185,7 +185,7 @@ namespace Mac.PetShop2021comp1.UI
                 Name = newName,
                 Price = newPrice,
                 Birthday = petUpdate.Birthday,
-                Color = petUpdate.Color,
+                Colors = petUpdate.Colors,
                 SoldTime = petUpdate.SoldTime,
                 Type = petUpdate.Type
             });
@@ -208,7 +208,7 @@ namespace Mac.PetShop2021comp1.UI
             Console.WriteLine(value);
         }
         
-        public void InitData()
+        /*public void InitData()
         {
             var pet1 = new Pet()
             {
@@ -219,7 +219,7 @@ namespace Mac.PetShop2021comp1.UI
                 }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
-                Color = "Brown",
+                Colors = "Brown",
                 Price = 4000
             };
             _service.Add(pet1);
@@ -233,7 +233,7 @@ namespace Mac.PetShop2021comp1.UI
                 }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
-                Color = "Black",
+                Colors = "Black",
                 Price = 5000
             };
             _service.Add(pet2);
@@ -247,7 +247,7 @@ namespace Mac.PetShop2021comp1.UI
                 }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
-                Color = "Red",
+                Colors = "Red",
                 Price = 6000
             };
             _service.Add(pet3);
@@ -261,7 +261,7 @@ namespace Mac.PetShop2021comp1.UI
                 }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
-                Color = "Black",
+                Colors = "Black",
                 Price = 30000
             };
             _service.Add(pet4);
@@ -275,7 +275,7 @@ namespace Mac.PetShop2021comp1.UI
                 }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
-                Color = "White",
+                Colors = "White",
                 Price = 500
             };
             _service.Add(pet5);
@@ -289,10 +289,10 @@ namespace Mac.PetShop2021comp1.UI
                 }),
                 Birthday = new DateTime(2021, 5, 8),
                 SoldTime = new DateTime(2021, 5, 9),
-                Color = "Brown",
+                Colors = "Brown",
                 Price = 150
             };
             _service.Add(pet6);
-        }
+        }*/
     }
 }

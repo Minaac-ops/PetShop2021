@@ -10,12 +10,12 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.PetShop2021.Infrastructu
     {
         public PetRepositoryInMemory()
         {
-            if (FakeDb.Pets.Count >= 1) return;
+            /*if (FakeDb.Pets.Count >= 1) return;
             var pet1 = new Pet()
             {
                 Id = FakeDb.Id++,
                 Birthday = new DateTime(2021, 8, 9),
-                Color = "Brown",
+                Colors = "Brown",
                 Name = "Trine",
                 Price = 3000,
                 Type = new PetType()
@@ -30,7 +30,7 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.PetShop2021.Infrastructu
             {
                 Id = FakeDb.Id++,
                 Birthday = new DateTime(2021, 6, 9),
-                Color = "Red",
+                Colors = "Red",
                 Name = "Mathias",
                 Price = 3000,
                 Type = new PetType()
@@ -41,7 +41,7 @@ namespace Mac.PetShop2021comp1.Infrastructure.DataAcces.PetShop2021.Infrastructu
                 Owner = new Owner(){Id = 1}
             };
             FakeDb.Pets.Add(pet1);
-            FakeDb.Pets.Add(pet2);
+            FakeDb.Pets.Add(pet2);*/
         }
 
         public int TotalCount()

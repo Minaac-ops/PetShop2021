@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Mac.PetShop2021comp1.Core.Models
 {
@@ -14,7 +15,7 @@ namespace Mac.PetShop2021comp1.Core.Models
         
         public DateTime SoldTime { get; set; }
         
-        public string Color { get; set; }
+        public List<Color> Colors { get; set; }
         
         public double Price { get; set; }
         
