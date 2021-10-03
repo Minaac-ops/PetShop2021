@@ -46,7 +46,8 @@ namespace Mac.PetShop2021.WebAPI.Controllers
                         Id = p.Id,
                         Name = p.Name,
                         Price = p.Price,
-                        Colors = p.Colors
+                        Colors = p.Colors,
+                        PetType = p.Type,
                     }).ToList()
                 });
             }

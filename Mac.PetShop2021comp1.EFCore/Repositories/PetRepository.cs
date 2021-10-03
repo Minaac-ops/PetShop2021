@@ -42,8 +42,14 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
             {
                 Id = pe.Id,
                 Name = pe.Name,
+                Price = pe.Price,
+                Type = new PetType()
+                {
+                    Id = pe.PetType.Id,
+                    Name = pe.PetType.Name
+                },
                 Colors = pe.Colors.Select(pce => new Color(){
-                    Id = pce.Color.Id, 
+                    Id = pce.Color.Id,
                     ColorName= pce.Color.Color
                 }).ToList()
             });
