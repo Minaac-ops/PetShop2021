@@ -43,10 +43,23 @@ namespace Mac.PetShop2021comp1.EFCore.Repositories
                 Id = pe.Id,
                 Name = pe.Name,
                 Price = pe.Price,
-                Type = new PetType()
+                Owner = new Owner
+                {
+                    Id = pe.Owner.Id,
+                    Address = pe.Owner.Address,
+                    Email = pe.Owner.Email,
+                    OwnerName = pe.Owner.OwnerName
+                },
+                Type = new PetType
                 {
                     Id = pe.PetType.Id,
                     Name = pe.PetType.Name
+                },
+                Insurance = new Insurance
+                {
+                    Id = pe.Insurance.Id,
+                    Name = pe.Insurance.Name,
+                    Price = pe.Insurance.Price
                 },
                 Colors = pe.Colors.Select(pce => new Color(){
                     Id = pce.Color.Id,

@@ -9,6 +9,8 @@ namespace Mac.PetShop2021.WebAPI.Dtos
         public string Name { get; set; }
         public double Price { get; set; }
         public PetType PetType { get; set; }
+        public Insurance Insurance { get; set; }
         public List<Color> Colors { get; set; }
+        public Owner Owner { get; set; }
     }
 }
